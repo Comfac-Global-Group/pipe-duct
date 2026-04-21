@@ -1,0 +1,44 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="1024pt" height="1024pt"
+ viewBox="120 110 280 380"
+ preserveAspectRatio="xMidYMid meet">
+
+<path fill="#2060df" stroke="#1a252f" stroke-width="8" stroke-linejoin="round"
+d="M170 330 L170 440 C170 470 342 470 342 440 L342 330 Z"/>
+
+<path fill="#2060df" stroke="#1a252f" stroke-width="8"
+d="M140 280 L198 250 L198 350 L140 380 Z"/>
+
+<path fill="#2060df" stroke="#1a252f" stroke-width="8"
+d="M198 350 L314 350 L314 250 L198 250 Z"/>
+
+<path fill="#2060df" stroke="#1a252f" stroke-width="8"
+d="M314 250 L372 280 L372 380 L314 350 Z"/>
+
+<path fill="#2060df" stroke="#1a252f" stroke-width="8"
+d="M140 280 L256 220 L372 280 L256 310 Z"/>
+
+<ellipse cx="256" cy="245" rx="60" ry="22"
+fill="#2060df" stroke="#1a252f" stroke-width="6"/>
+
+<path fill="#2060df" stroke="#1a252f" stroke-width="8"
+d="M210 135 L302 135 L302 245 L210 245 Z"/>
+
+<g fill="none" stroke="#1a252f" stroke-width="5" stroke-linecap="round">
+<path d="M210 155 Q256 168 302 155"/>
+<path d="M210 180 Q256 193 302 180"/>
+<path d="M210 205 Q256 218 302 205"/>
+<path d="M210 230 Q256 243 302 230"/>
+</g>
+
+<ellipse cx="256" cy="135" rx="46" ry="18"
+fill="#2060df" stroke="#1a252f" stroke-width="8"/>
+
+<ellipse cx="256" cy="135" rx="22" ry="9"
+fill="#2060df" stroke="#1a252f" stroke-width="4"/>
+
+</svg>

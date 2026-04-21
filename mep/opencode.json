@@ -1,0 +1,23 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "agent": {
+    "build": {
+      "mode": "primary",
+      "model": "opencode/big-pickle",
+      "prompt": "{file:./agents/Agents.md}",
+      "description": "Lead orchestrator. Understands the whole codebase via Agents.md."
+    },
+    "pipe-engineer": {
+      "mode": "subagent",
+      "model": "opencode/big-pickle",
+      "prompt": "{file:./agents/Agents.md}\n\n{file:./agents/pipe-agent.md}",
+      "description": "Specialist in circular cross-sections and ASME pipe standards."
+    },
+    "duct-engineer": {
+      "mode": "subagent",
+      "model": "opencode/big-pickle",
+      "prompt": "{file:./agents/Agents.md}\n\n{file:./agents/duct-agent.md}",
+      "description": "Specialist in rectangular, oval, and ciruclar lofts, as well as SMACNA and ASHRAE HVAC standards."
+    }
+  }
+}

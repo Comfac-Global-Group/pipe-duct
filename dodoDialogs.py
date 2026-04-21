@@ -1,5 +1,4 @@
-from PySide.QtCore import *
-from PySide.QtGui import *
+from dodo_compat import *
 from sys import platform
 from os.path import join, dirname, abspath
 from os import listdir
@@ -84,7 +83,7 @@ class protoPypeForm(QDialog):
     self.setWindowFlags(Qt.WindowStaysOnTopHint)
     self.setWindowTitle(winTitle)
     iconPath=join(dirname(abspath(__file__)),"iconz",icon)
-    from PySide.QtGui import QIcon
+    from compat import QtGui
     Icon=QIcon()
     Icon.addFile(iconPath)
     self.setWindowIcon(Icon) 

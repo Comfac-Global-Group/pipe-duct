@@ -4,8 +4,7 @@ __license__="LGPL 3"
 
 import FreeCAD,FreeCADGui
 import fCmd, dodoDialogs
-from PySide.QtCore import *
-from PySide.QtGui import *
+from dodo_compat import *
 from os.path import join, dirname, abspath
 from sys import platform
 from uCmd import label3D

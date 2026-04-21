@@ -5,7 +5,7 @@ __author__="oddtopus"
 __url__="github.com/oddtopus/dodo"
 __license__="LGPL 3"
 
-from PySide import QtGui, QtCore
+from compat import QtWidgets, QtCore, QtGui
 import FreeCAD,FreeCADGui
  
 # UI Class definitions
@@ -109,8 +109,7 @@ class QueryForm(QtGui.QDialog): #QWidget):
   def onCancel(self):
     self.close()
 
-from PySide.QtCore import *
-from PySide.QtGui import *
+from dodo_compat import *
 from os import listdir
 from os.path import join, dirname, abspath
 
@@ -124,7 +123,7 @@ class rotWPForm(QDialog): #QWidget):
     self.setWindowFlags(Qt.WindowStaysOnTopHint)
     self.setWindowTitle(winTitle)
     iconPath=join(dirname(abspath(__file__)),"iconz",icon)
-    from PySide.QtGui import QIcon
+    from compat import QtGui
     Icon=QIcon()
     Icon.addFile(iconPath)
     self.setWindowIcon(Icon) 
@@ -174,8 +173,7 @@ class rotWPForm(QDialog): #QWidget):
 # DP_calc
 
 import csv
-from PySide.QtCore import *
-from PySide.QtGui import *
+from dodo_compat import *
 from math import pi, log, radians, sin, sqrt, atan, degrees
 
 class dpCalcDialog:

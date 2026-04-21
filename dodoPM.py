@@ -7,8 +7,7 @@
 # Copyright (C) 2015 microelly <microelly2@freecadbuch.de>
 
 import FreeCAD, FreeCADGui, math, platform, csv, pCmd
-from PySide import QtCore
-from PySide import QtGui
+from compat import QtWidgets, QtCore, QtGui
 from os.path import join, dirname, abspath
 from os import listdir
 

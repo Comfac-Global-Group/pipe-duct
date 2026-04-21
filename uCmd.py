@@ -258,7 +258,7 @@ class label3D(object):
     self.transform.rotation.setValue(tuple(self.Placement.Rotation.Q))
 
 import DraftTools,Draft,uForms
-from PySide.QtGui import *
+from dodo_compat import *
 class hackedLine(DraftTools.Line):
   '''
   One hack of the class DraftTools.Line

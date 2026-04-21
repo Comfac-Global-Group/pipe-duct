@@ -1,0 +1,56 @@
+{
+  "metadata": {
+    "standard": "ASHRAE & SMACNA Combined Rectangular",
+    "description": "Internal clear dimensions based on ASHRAE sizing; external shell thickness based on SMACNA low-pressure class."
+
+  },
+  "global_design_rules": {
+    "aspect_ratio": {
+      "ideal_max": 3.0,
+      "absolute_max": 4.0,
+      "warning_message": "Aspect ratio exceeds ASHRAE 4:1 limit. High friction and noise likely."
+    },
+    "fabrication": {
+      "standard_increment_in": 2.0,
+      "minimum_dimension_in": 6.0,
+      "warning_message": "Non-standard dimension. Use even inch increments (e.g., 10, 12, 14) for SMACNA compliance."
+    }
+  },
+  "gauge_thicknesses": {
+    "Galvanized_Steel": {
+      "26_Ga": {"thickness_in": 0.0217, "thickness_mm": 0.551},
+      "24_Ga": {"thickness_in": 0.0276, "thickness_mm": 0.701},
+      "22_Ga": {"thickness_in": 0.0336, "thickness_mm": 0.853},
+      "20_Ga": {"thickness_in": 0.0396, "thickness_mm": 1.006},
+      "18_Ga": {"thickness_in": 0.0516, "thickness_mm": 1.311}
+    }
+  },
+  "smacna_pressure_classes": {
+    "Low_Pressure_2_inch_WG": {
+      "rules": [
+        {"max_width_in": 12, "required_gauge": "26_Ga"},
+        {"max_width_in": 30, "required_gauge": "24_Ga"},
+        {"max_width_in": 54, "required_gauge": "22_Ga"},
+        {"max_width_in": 84, "required_gauge": "20_Ga"}
+      ]
+    }
+  },
+  "ashrae_standard_sizes": {
+    "12x12": {
+      "internal_width_in": 12.0,
+      "internal_height_in": 12.0,
+      "equivalent_round_diameter_in": 13.1
+    },
+    "24x18": {
+      "internal_width_in": 24.0,
+      "internal_height_in": 18.0,
+      "equivalent_round_diameter_in": 22.5
+    },
+    "36x24": {
+      "internal_width_in": 36.0,
+      "internal_height_in": 24.0,
+      "equivalent_round_diameter_in": 32.2
+    }
+  }
+}
+

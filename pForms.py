@@ -7,8 +7,7 @@ pq=FreeCAD.Units.parseQuantity
 import fCmd, pCmd, dodoDialogs
 from os import listdir
 from os.path import join, dirname, abspath
-from PySide.QtCore import *
-from PySide.QtGui import *
+from dodo_compat import *
 from math import degrees
 from DraftVecUtils import rounded
 
@@ -760,7 +759,7 @@ class insertPypeLineForm(dodoDialogs.protoPypeForm):
         pCmd.updatePLColor([pl])
     self.show()
   def partList(self):
-    from PySide.QtGui import QFileDialog as qfd
+    from compat import QtWidgets; qfd = QtWidgets.QFileDialog
     f=None
     f=qfd.getSaveFileName()[0]
     if f:
@@ -860,7 +859,7 @@ class breakForm(QDialog):
     self.setWindowFlags(Qt.WindowStaysOnTopHint)
     self.setWindowTitle(winTitle)
     iconPath=join(dirname(abspath(__file__)),"iconz",icon)
-    from PySide.QtGui import QIcon
+    from compat import QtGui
     Icon=QIcon()
     Icon.addFile(iconPath)
     self.setWindowIcon(Icon) 
@@ -1072,7 +1071,6 @@ class insertValveForm(dodoDialogs.protoPypeForm):
         FreeCAD.activeDocument().recompute()
 
 import DraftTools,Draft,uForms, uCmd
-from PySide.QtGui import *
 class point2pointPipe(DraftTools.Line):
   '''
   Draw pipes by sequence point.

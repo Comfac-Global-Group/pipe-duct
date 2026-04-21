@@ -8,8 +8,7 @@ __license__="LGPL 3"
 import FreeCAD, FreeCADGui, Part, csv, fCmd, pCmd, ArchProfile
 from Arch import makeStructure
 from Draft import makeCircle
-from PySide.QtCore import *
-from PySide.QtGui import *
+from dodo_compat import *
 from os import listdir
 from os.path import join, dirname, abspath
 from math import degrees
@@ -73,7 +72,7 @@ class frameLineForm(QDialog):
     self.move(QPoint(100,250))
     self.setWindowFlags(Qt.WindowStaysOnTopHint)
     self.setWindowTitle(winTitle)
-    from PySide.QtGui import QIcon
+    from compat import QtGui
     Icon=QIcon()
     iconPath=join(dirname(abspath(__file__)),"iconz",icon)
     Icon.addFile(iconPath)
@@ -251,7 +250,7 @@ class insertSectForm(QWidget):
     self.setWindowFlags(Qt.WindowStaysOnTopHint)
     self.setWindowTitle(winTitle)
     iconPath=join(dirname(abspath(__file__)),"iconz",icon)
-    from PySide.QtGui import QIcon
+    from compat import QtGui
     Icon=QIcon()
     Icon.addFile(iconPath)
     self.setWindowIcon(Icon) 
@@ -744,7 +743,8 @@ if FreeCAD.GuiUp:
     # import FreeCADGui
     # from PySide import QtCore, QtGui
     from DraftTools import translate
-    from PySide.QtCore import QT_TRANSLATE_NOOP
+    from compat import QtCore
+    QT_TRANSLATE_NOOP = QtCore.QT_TRANSLATE_NOOP
 else:
     # \cond
     def translate(ctxt,txt):

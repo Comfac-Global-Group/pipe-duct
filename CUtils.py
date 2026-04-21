@@ -70,7 +70,7 @@ class offsetWorkPlane:
       s=FreeCAD.ParamGet("User parameter:BaseApp/Preferences/Mod/Draft").GetInt("gridSize")
       sc=[float(x*s) for x in [1,1,.2]]
       arrow =uCmd.arrow(FreeCAD.DraftWorkingPlane.getPlacement(),scale=sc,offset=s)
-      from PySide.QtGui import QInputDialog as qid
+      from compat import QtWidgets; qid = QtWidgets.QInputDialog
       offset=qid.getInt(None,'Offset Work Plane','Offset: ')
       if offset[1]>0:
         uCmd.offsetWP(offset[0])

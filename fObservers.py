@@ -120,7 +120,7 @@ class stretchBeamObserver(frameObserverPrototype): #OBSOLETE: replaced with dial
       if self.beam==None and Obj.TypeId=='Part::FeaturePython' and hasattr(Obj,'Height'):
         self.beam=Obj
         FreeCAD.Console.PrintMessage('Beam type selected.\n')
-        from PySide.QtGui import QInputDialog as qid
+        from compat import QtWidgets; qid = QtWidgets.QInputDialog
         dist=float(qid.getText(None,"stretch a beam","old length = "+str(self.beam.Height)+"\nnew length?")[0])
         fCmd.stretchTheBeam(self.beam,dist)
         FreeCAD.activeDocument().recompute()
